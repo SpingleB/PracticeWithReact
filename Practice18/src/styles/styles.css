@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-grey-300: #C5C6CE;
+  --color-grey-200: #D8D8D8;
+  --color-navy-950: #00001A;
+  --color-navy-600: #5E607A;
+  --color-gold-400: #E9AA52;
+  --color-red-500: #F15D51;
+  --fast: 0.3s ease;
+}
+
+.inter-preset-1-extrabold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 3.5rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 3.5rem;
+}
+
+.inter-preset-2-extrabold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 2.5rem;
+}
+
+.inter-preset-3-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 2rem;
+}
+
+.inter-preset-4-extrabold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+.inter-preset-5-extrabold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+}
+
+.inter-preset-6-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.938rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.625rem;
+}
+
+.inter-preset-7-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 4.38px;
+  line-height: 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  padding: 40px 32px;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+.menuButton {
+  cursor: pointer;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 24px;
+}
+.article-container img {
+  width: 100%;
+}
+.article-container h1 {
+  color: var(--color-navy-950);
+}
+.article-container p {
+  color: var(--color-navy-600);
+}
+
+.button-read-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-red-500);
+  padding: 8px 32px;
+  color: var(--color-navy-950);
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: var(--fast);
+}
+.button-read-more:active {
+  background-color: var(--color-navy-950);
+  color: var(--color-white);
+  transition: var(--fast);
+}
+
+.featured-articles h1 {
+  color: var(--color-gold-400);
+  margin-bottom: 10px;
+}
+.featured-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 15px;
+  background-color: var(--color-navy-950);
+  padding: 16px 24px;
+  box-sizing: border-box;
+}
+.featured-articles hr {
+  width: 100%;
+  background-color: var(--color-navy-600);
+  height: 1px;
+  border: none;
+}
+
+.featured {
+  width: 100%;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.featured p {
+  color: var(--color-grey-300);
+}
+.featured h2 {
+  color: var(--color-white);
+}
+
+.article-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  box-sizing: border-box;
+  gap: 32px;
+}
+
+.article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: 130px;
+}
+.article img {
+  height: 100%;
+}
+.article .article-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 8px;
+}
+.article .article-info h1 {
+  color: var(--color-red-500);
+}
+.article .article-info h2 {
+  color: var(--color-navy-950);
+}
+.article .article-info p {
+  color: var(--color-navy-600);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,20 @@
+.featured-articles {
+    h1 {
+        color: var(--color-gold-400);
+        margin-bottom: 10px
+    }
+
+    @include flex-col-center-start;
+    width: 100%;
+    gap: 15px;
+    background-color: var(--color-navy-950);
+    padding: 16px 24px;
+    box-sizing: border-box;
+
+    hr {
+        width: 100%;
+        background-color: var(--color-navy-600);
+        height: 1px;
+        border: none;
+    }
+}

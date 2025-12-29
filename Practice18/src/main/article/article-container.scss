@@ -1,0 +1,18 @@
+.article-container {
+    @include flex-col-center-start;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 24px;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        color: var(--color-navy-950);
+    }
+
+    p {
+        color: var(--color-navy-600);
+    }
+}

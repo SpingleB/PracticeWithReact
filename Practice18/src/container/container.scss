@@ -1,0 +1,7 @@
+.container {
+    @include flex-col-center-start ;
+    width: 100%;
+    padding: 40px 32px;
+    box-sizing: border-box;
+    gap: 30px;
+}

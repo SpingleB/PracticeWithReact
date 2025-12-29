@@ -1,0 +1,16 @@
+.button-read-more {
+    @include flex-center;
+    background-color: var(--color-red-500);
+    padding: 8px 32px;
+    color: var(--color-navy-950);
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: var(--fast);
+
+    &:active {
+        background-color: var(--color-navy-950);
+        color: var(--color-white);
+        transition: var(--fast);
+    }
+}

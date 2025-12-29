@@ -1,0 +1,13 @@
+.featured {
+    width: 100%;
+    gap: 5px;
+    @include flex-col-center-start;
+
+    p {
+        color: var(--color-grey-300);
+    }
+
+    h2 {
+        color: var(--color-white);
+    }
+}

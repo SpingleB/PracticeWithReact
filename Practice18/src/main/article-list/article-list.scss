@@ -1,0 +1,6 @@
+.article-list {
+    width: 100%;
+    @include flex-col-center-start;
+    box-sizing: border-box;
+    gap: 32px;
+}
