@@ -3,11 +3,19 @@
     gap: 5px;
     @include flex-col-center-start;
 
+    
+
     p {
         color: var(--color-grey-300);
     }
 
     h2 {
         color: var(--color-white);
+        cursor: pointer;
+        transition: var(--fast);
+        &:active {
+            color: var(--color-gold-400);
+            transform: scale(0.95);
+        }
     }
 }

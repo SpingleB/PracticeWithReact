@@ -1,13 +1,12 @@
 .article {
     width: 100%;
-    @include flex-row-center-center;
+    @include flex-row-center-start;
     gap: 24px;
     height: 130px;
 
-    img{
-        height: 100%;
-    }
-
+        img{
+            height: 100%;
+        }
     .article-info {
         @include flex-col-center-start;
         gap: 8px;
@@ -18,6 +17,12 @@
 
         h2 {
             color: var(--color-navy-950);
+            cursor: pointer;
+            transition: var(--fast);
+            &:active {
+                color: var(--color-red-500);
+                transform: scale(0.95);
+            }
         }
 
         p {

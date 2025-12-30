@@ -24,3 +24,17 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin flex-row-center-start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+@mixin flex-col-start-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}

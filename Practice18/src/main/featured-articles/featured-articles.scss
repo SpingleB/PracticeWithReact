@@ -1,7 +1,8 @@
 .featured-articles {
     h1 {
         color: var(--color-gold-400);
-        margin-bottom: 10px
+        margin-bottom: 10px;
+        z-index: 50;
     }
 
     @include flex-col-center-start;

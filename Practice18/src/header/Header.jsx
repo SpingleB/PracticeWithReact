@@ -4,7 +4,7 @@ import Nav from './navigation/Nav'
 
 
 const Header = (props) => {
-const { } = props
+const { onClick } = props;
 
   const [ isMobile, setIsMobile ] = useState(false)
 
@@ -27,7 +27,7 @@ const { } = props
             fill="#00001A"
           />
         </svg>
-        {isMobile ? <MenuButton /> : <Nav />}
+        {isMobile ? <MenuButton onClick={onClick} /> : <Nav />}
       </header>
     );
 }

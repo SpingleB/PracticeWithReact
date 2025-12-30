@@ -1,11 +1,16 @@
-import Header from '../header/Header'
+import { useState } from 'react';
+import Header from '../header/Header.jsx'
 import MainBlock from '../main/MainBlock'
-const Container = (props) => {
-    
+import Menu from '../menu/Menu'
+const Container = () => {
+
+  const [ isShown, setIsShown ] = useState(false)
+  
     return (
       <div className="container">
-        <Header />
-        <MainBlock/>
+        <Header onClick={setIsShown} />
+        {isShown && <Menu onClick={() => setIsShown(false)} />}
+        <MainBlock />
       </div>
     );
 }

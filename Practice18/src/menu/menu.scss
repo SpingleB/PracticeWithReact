@@ -1,0 +1,28 @@
+.manu-nav-list {
+    @include flex-col-center-start;
+    list-style: none;
+    gap: 24px;
+}
+
+.menu-nav {
+    @include flex-col-start-start;
+    padding: 27px 21px;
+    gap: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    background-color: var(--color-white);
+    right: 0;
+    top: 0;
+    width: 50%;
+    backdrop-filter: blur(4px);
+    z-index: 100;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}

@@ -1,7 +1,7 @@
 .inter-preset-1-extrabold {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 3.5rem;
+  font-size: 3.5rem;
   font-style: normal;
   font-weight: 800;
   letter-spacing: 0;
@@ -66,4 +66,15 @@
   font-weight: 700;
   letter-spacing: 4.38px;
   line-height: 1.5rem;
+}
+
+.mobile-menu-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  color: var(--color-navy-950);
 }

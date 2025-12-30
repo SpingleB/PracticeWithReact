@@ -1,0 +1,19 @@
+.navigation {
+    @include flex-center;
+    box-sizing: border-box;
+}
+
+.nav-list {
+    list-style: none;
+    @include flex-row-btw-center;
+    gap: 40px;
+
+    .list-item {
+        color: var(--color-navy-600);
+        cursor: pointer;
+        transition: var(--fast);
+        &:active {
+            color: var(--color-red-500);
+        }
+    }
+}
