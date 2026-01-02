@@ -1,0 +1,37 @@
+.header {
+    @include flex-row-btw-center;
+    box-sizing: border-box;
+    position: relative;
+    padding: 24px;
+    width: 100%;
+}
+
+.menu-and-logo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 16px;
+
+   svg:last-child{
+    margin-bottom: 4px;
+   }
+}
+
+.cart-and-account {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 16px;
+   position: relative;
+
+   .acc-div {
+    @include flex-center;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: var(--logo-radius);
+    img{
+        width: 100%;
+    }
+   }
+}

@@ -1,0 +1,32 @@
+.cart {
+    box-sizing: border-box;
+    padding: 24px 15px;
+    @include flex-col-start;
+    gap: 10px;
+    top: 78px;
+    right: 5px;
+    position: absolute;
+    background-color: var(--color-white);
+    z-index: 9700;
+    width: 360px;
+    border-radius: 10px;
+    height: 256px;
+}
+
+#cart-title {
+    color: var(--color-grey-950);
+}
+
+
+.products-list {
+    overflow-y: auto;
+    @include flex-col-center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid var(--color-grey-100);
+}
+
+.empty-message {
+    color: var(--color-grey-500);
+}

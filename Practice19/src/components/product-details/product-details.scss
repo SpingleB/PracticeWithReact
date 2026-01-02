@@ -1,0 +1,49 @@
+.product-details {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+    gap: 32px;
+    @include flex-col-center-start;
+}
+
+#company {
+    color: var(--color-grey-500);
+}
+
+#info-title {
+    color: var(--color-grey-950);
+}
+
+p {
+    color: var(--color-grey-500);
+}
+
+.price-div {
+    @include flex-row-btw-center;
+    box-sizing: border-box;
+    gap: 25px;
+    width: 100%;
+
+    .price {
+        @include flex-row-btw-center;
+        gap: 16px;
+
+        #price {
+            color: var(--color-grey-950);
+        }
+
+        .discount {
+            @include flex-center;
+            border-radius: 6px;
+            background-color: var(--color-grey-950);
+            color: var(--color-white);
+            box-sizing: border-box;
+            padding: 2px 10px;
+        }
+    }
+
+    .price-without-discount {
+        color: var(--color-grey-500);
+        text-decoration: line-through;
+    }
+}

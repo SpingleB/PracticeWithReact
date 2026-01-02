@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-grey-950: #1D2026;
+  --color-grey-500: #69707D;
+  --color-grey-300: #C3CAD9;
+  --color-grey-100: #E4E9F2;
+  --color-grey-50: #F6F8FD;
+  --color-orange-500: #FF7E1B;
+  --color-orange-300: #FFAB6A;
+  --logo-radius: 50%;
+  --select-product-radius: 50%;
+  --fast: 0.2s ease;
+}
+
+.kumbh-sans-preset-1-bold {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 2.75rem;
+  line-height: 3rem;
+  letter-spacing: 0;
+}
+
+.kumbh-sans-preset-2-bold {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  letter-spacing: 0;
+}
+
+.kumbh-sans-preset-3-bold {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: 0;
+}
+
+.kumbh-sans-preset-3-regular {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: 0;
+}
+
+.kumbh-sans-preset-4-regular {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 0.938rem;
+  line-height: 1.625rem;
+  letter-spacing: 0;
+}
+
+.kumbh-sans-preset-5-bold {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 0.813rem;
+  line-height: 1rem;
+  letter-spacing: 0.125rem;
+}
+
+.kumbh-sans-preset-6-bold {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 0.75rem;
+  line-height: 0.938rem;
+  letter-spacing: 0.116rem;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  padding: 24px;
+  width: 100%;
+}
+
+.menu-and-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.menu-and-logo svg:last-child {
+  margin-bottom: 4px;
+}
+
+.cart-and-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+.cart-and-account .acc-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: var(--logo-radius);
+}
+.cart-and-account .acc-div img {
+  width: 100%;
+}
+
+.product-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.product-div img {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: transparent;
+}
+.overlay .perviuos, .overlay .next {
+  background-color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--select-product-radius);
+}
+.overlay .left, .overlay .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-details {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+#company {
+  color: var(--color-grey-500);
+}
+
+#info-title {
+  color: var(--color-grey-950);
+}
+
+p {
+  color: var(--color-grey-500);
+}
+
+.price-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 25px;
+  width: 100%;
+}
+.price-div .price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.price-div .price #price {
+  color: var(--color-grey-950);
+}
+.price-div .price .discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: var(--color-grey-950);
+  color: var(--color-white);
+  box-sizing: border-box;
+  padding: 2px 10px;
+}
+.price-div .price-without-discount {
+  color: var(--color-grey-500);
+  text-decoration: line-through;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  background-color: var(--color-orange-500);
+  color: var(--color-black);
+  border-radius: 10px;
+  padding: 16px 72px;
+  border: none;
+  box-shadow: 0 12px 32px -6px rgba(255, 126, 27, 0.4);
+  width: 100%;
+  transition: var(--fast);
+}
+.add-to-cart-btn:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .add-to-cart-btn:hover {
+    cursor: pointer;
+    background-color: var(--color-orange-300);
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .add-to-cart-btn:active {
+    background-color: var(--color-orange-300);
+  }
+}
+.add-to-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.quality {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.quality span {
+  color: var(--color-black);
+}
+
+.minus-div, .plus-div {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 24px;
+  box-sizing: border-box;
+  position: fixed;
+  gap: 56px;
+  height: 100vh;
+  width: 250px;
+  transform: translateX(-250px);
+  transition: var(--fast);
+  background-color: var(--color-white);
+  top: 0;
+  z-index: 9900;
+}
+
+.mobile-menu {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 24px;
+}
+.mobile-menu-item {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  letter-spacing: 0;
+  color: var(--color-grey-950);
+}
+
+.mobile-menu-active {
+  transform: translateX(0);
+}
+
+.menu-overlay {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 9800;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: var(--fast);
+}
+
+.overlay-active {
+  display: block;
+  opacity: 1;
+}
+
+.cart {
+  box-sizing: border-box;
+  padding: 24px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  top: 78px;
+  right: 5px;
+  position: absolute;
+  background-color: var(--color-white);
+  z-index: 9700;
+  width: 360px;
+  border-radius: 10px;
+  height: 256px;
+}
+
+#cart-title {
+  color: var(--color-grey-950);
+}
+
+.products-list {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid var(--color-grey-100);
+}
+
+.empty-message {
+  color: var(--color-grey-500);
+}
+
+/*# sourceMappingURL=styles.css.map */

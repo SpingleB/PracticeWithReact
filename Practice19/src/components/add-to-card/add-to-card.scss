@@ -1,0 +1,49 @@
+.add-to-cart-btn {
+    @include flex-center;
+    gap: 8px;
+    box-sizing: border-box;
+    background-color: var(--color-orange-500);
+    color: var(--color-black);
+    border-radius: 10px;
+    padding: 16px 72px;
+    border: none;
+    box-shadow: 0 12px 32px -6px rgba(255, 126, 27, 0.4);
+    width: 100%;
+    transition: var(--fast);
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .add-to-cart-btn:hover {
+        cursor: pointer;
+        background-color: var(--color-orange-300);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .add-to-cart-btn:active {
+        background-color: var(--color-orange-300);
+    }
+}
+
+.add-to-cart {
+    @include flex-col-center;
+    width: 100%;
+    gap: 16px
+}
+
+.quality {
+    @include flex-row-btw-center;
+    width: 100%;
+    span{
+        color: var(--color-black)
+    }
+}
+
+.minus-div, .plus-div {
+    cursor: pointer;
+    @include flex-center;
+}
