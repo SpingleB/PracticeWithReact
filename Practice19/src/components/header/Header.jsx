@@ -4,6 +4,7 @@ import ProductList from "../cart/ProductList";
 import { ProductContext } from "../context/PruductContext";
 import { memo } from "react";
 import Navigation from "./navigation/Navigation";
+import Avatar from "/src/images/image-avatar.png";
 
 const Header = (props) => {
 
@@ -72,7 +73,7 @@ const Header = (props) => {
             />
           </svg>
           <div className="acc-div">
-            <img src="/src/images/image-avatar.png" alt="Avatar" />
+            <img src={Avatar} alt="Avatar" />
           </div>
         </div>
         {isCartOpen && (
