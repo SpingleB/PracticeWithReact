@@ -19,14 +19,119 @@
 
 
 .products-list {
-    overflow-y: auto;
     @include flex-col-center;
     box-sizing: border-box;
     width: 100%;
+    gap: 24px;
     height: 100%;
     border-top: 1px solid var(--color-grey-100);
+    overflow-y: auto;
 }
 
 .empty-message {
     color: var(--color-grey-500);
+}
+
+.cart-list {
+    list-style: none;
+    width: 100%;
+    @include flex-col-center;
+    gap: 24px;
+}
+
+.cart-item {
+    width: 100%;
+    @include flex-row-btw-center;
+    gap: 16px;
+
+    span{
+        color: var(--color-grey-500);
+    }
+
+    .all-price-span {
+        color: var(--color-black);
+    }
+
+    svg{
+        cursor: pointer;
+        transition: var(--fast);
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+   
+}
+
+.checkout-btn {
+    width: 100%;
+    @include flex-center;
+    background-color: var(--color-orange-500);
+    transition: var(--fast);
+    box-sizing: border-box;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:active {
+        transform: scale(0.98);
+        background-color: var(--color-orange-300);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .checkout-btn:hover {
+    background-color: var(--color-orange-300);
+}
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .checkout-btn:active {
+    transform: scale(0.98);
+    background-color: var(--color-orange-300);
+}
+}
+
+.all-price-span {
+    margin-left: 5px;
+}
+
+.cart-img {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 4px;
+    @include flex-center;
+    img {
+        width: 100%;
+    }
+}
+
+.sneakers-name-span {
+    margin-right: 5px;
+}
+
+.cart-item-info {
+    @include flex-col-center-start;
+}
+
+.quantity-purchased {
+    @include flex-center;
+    position: absolute;
+    background-color: var(--color-orange-500);
+    box-sizing: border-box;
+    padding: 0 5px;
+    top: 0;
+    left: 12px;
+    cursor: pointer;
+    border-radius: 40%;
+    font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-size: 0.625rem;
+  line-height: 0.938rem;
+  letter-spacing: 0.116rem;
+  color: var(--color-white);
 }

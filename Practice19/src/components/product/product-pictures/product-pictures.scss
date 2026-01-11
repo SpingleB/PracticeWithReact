@@ -1,0 +1,19 @@
+.product-pictures {
+    width: 600px;
+    box-sizing: border-box;
+    @include flex-row-btw-center;
+
+    .product-picture-div {
+        overflow: hidden;
+        @include flex-center;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 90px;
+        height: 90px;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

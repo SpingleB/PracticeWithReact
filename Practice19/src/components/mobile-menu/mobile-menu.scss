@@ -10,7 +10,12 @@
     transition: var(--fast);
     background-color: var(--color-white);
     top: 0;
+    left: 0;
     z-index: 9900;
+
+    svg {
+        cursor: pointer;
+    }
 }
 
 .mobile-menu {
@@ -28,6 +33,13 @@
     font-size: 1.125rem;
     line-height: 1.625rem;
     letter-spacing: 0;
+    cursor: pointer;
+    transition: var(--fast);
+
+    &:active {
+        transform: scale(0.99);
+        color: var(--color-grey-500);
+    } 
 
     color: var(--color-grey-950);
     }

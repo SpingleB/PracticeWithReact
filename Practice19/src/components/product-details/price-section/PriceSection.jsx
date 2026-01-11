@@ -1,13 +1,13 @@
-const PriceSection = ( props ) => {
-    const { discount } = props 
-    let priceWithoutDicsount = 250;
-    let price = priceWithoutDicsount;
+import { useContext } from "react";
+import { ProductContext } from "../../context/PruductContext";
 
+const PriceSection = () => {
+  const { discount, price, priceWithoutDicsount, } = useContext(ProductContext);
     return (
       <div className="price-div">
         <div className="price">
           <span id="price" className="kumbh-sans-preset-2-bold">
-            ${discount ? (price * discount ) / 100 : price}
+            ${price}
           </span>
           {discount && (
             <span className="discount kumbh-sans-preset-3-bold">

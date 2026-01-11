@@ -1,21 +1,28 @@
+import Button from "../add-to-card/Button";
+
 const Cart = ( props ) => {
-    const {
-        children
-    } = props
+    const { children, onClick } = props;
     return (
-      <section
-        aria-labelledby="cart-title"
-        className="cart"
-      >
+      <section aria-labelledby="cart-title" className="cart">
         <h2 id="cart-title" className="kumbh-sans-preset-3-bold">
           Cart
         </h2>
         <div className="products-list">
-          {children}
-          {!children && (
+          {children ? (
+            children
+          ) : (
             <span className="kumbh-sans-preset-3-bold empty-message">
               Your cart is empty.
             </span>
+          )}
+          {children ? (
+            <Button
+              onClick={onClick}
+              className="checkout-btn kumbh-sans-preset-3-bold"
+              content="Checkout"
+            />
+          ) : (
+            ``
           )}
         </div>
       </section>

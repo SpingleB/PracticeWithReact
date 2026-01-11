@@ -1,28 +1,46 @@
-import { useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import Cart from "../cart/Cart";
+import ProductList from "../cart/ProductList";
+import { ProductContext } from "../context/PruductContext";
+import { memo } from "react";
+import Navigation from "./navigation/Navigation";
 
 const Header = (props) => {
-  const [ isCartOpen, setIsCartOpen ] = useState(false)
 
-  const toggleShowCart = () => {
+  const toggleShowCart = useCallback(() => {
     setIsCartOpen(prev => !prev);
-  }
-  const { onClick } = props
+  }, [])
+  const { onClick, isDesktop } = props;
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const { cartItem, setCartItem, quantityPurchased, setQuantityPurchased } =
+    useContext(ProductContext);
+    const deleteItem = useCallback((id) => {
+      setCartItem((prev) => {
+        const updated = prev.filter((item) => item.id !== id);
+        localStorage.setItem("cart", JSON.stringify(updated));
+        setQuantityPurchased(updated.length);
+        return updated;
+      });
+    }, []);
+
     return (
       <header className="header">
         <div className="menu-and-logo">
-          <svg
-            onClick={onClick}
-            width="16"
-            height="15"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
-              fill="#69707D"
-              fillRule="evenodd"
-            />
-          </svg>
+          {!isDesktop && (
+            <svg
+              onClick={onClick}
+              width="16"
+              height="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+                fill="#69707D"
+                fillRule="evenodd"
+              />
+            </svg>
+          )}
 
           <svg width="138" height="20" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -32,7 +50,15 @@ const Header = (props) => {
             />
           </svg>
         </div>
+        {isDesktop && <Navigation />}
         <div className="cart-and-account">
+          {quantityPurchased ? (
+            <span onClick={toggleShowCart} className="quantity-purchased">
+              {quantityPurchased}
+            </span>
+          ) : (
+            ``
+          )}
           <svg
             onClick={toggleShowCart}
             width="22"
@@ -49,12 +75,23 @@ const Header = (props) => {
             <img src="/src/images/image-avatar.png" alt="Avatar" />
           </div>
         </div>
-        {isCartOpen && 
-        <Cart>
-          
-        </Cart>}
+        {isCartOpen && (
+          <Cart
+            onClick={() => {
+              setIsCartOpen(false);
+            }}
+          >
+            {cartItem.length > 0 && (
+              <ProductList
+                cartItem={cartItem}
+                setCartItem={setCartItem}
+                deleteItem={deleteItem}
+              />
+            )}
+          </Cart>
+        )}
       </header>
     );
 }
 
-export default Header;
+export default memo(Header);

@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { ProductContext } from "../context/PruductContext";
 
 const Quality = () => {
-
-    const [ quality, setQuality] = useState(0)
+    const {quality, setQuality} = useContext(ProductContext)
+   
 
     return (
       <div className="quality">

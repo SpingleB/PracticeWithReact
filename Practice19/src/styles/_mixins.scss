@@ -31,3 +31,22 @@
     justify-content: start;
     align-items: start;
 }
+
+@mixin flex-start-center {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin flex-col-center-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+@mixin flex-end-center {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
