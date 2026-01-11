@@ -1,14 +1,13 @@
 import { useState } from "react";
 import ProductPictures from "./product-pictures/ProductPictures";
+import firstImage from "/src/images/image-product-1.jpg";
+import secondImage from "/src/images/image-product-2.jpg";
+import thirdImage from "/src/images/image-product-3.jpg";
+import fourthImage from "/src/images/image-product-4.jpg";
 
 const Product = (props) => {
   const { isDesktop, } = props;
-    const imagesArr = [
-      `/src/images/image-product-1.jpg`,
-      "/src/images/image-product-2.jpg",
-      "/src/images/image-product-3.jpg",
-      "/src/images/image-product-4.jpg"
-    ];
+    const imagesArr = [firstImage, secondImage, thirdImage, fourthImage];
 
     const [index, setIndex] = useState(0);
 

@@ -4,6 +4,7 @@ import ProductDetails from "../product-details/ProductDetails";
 import MobileMenu from "../mobile-menu/MobileMenu";
 import { useCallback, useMemo, useState, useEffect } from "react";
 import { ProductContext } from "../context/PruductContext";
+import firstImage from "/src/images/image-product-1.jpg";
 
 const Container = () => {
 const [ isOpen, setIsOpen ] = useState(false)
@@ -34,7 +35,7 @@ const addToCart = useCallback(() => {
       price,
       allPrice: price * quality,
       quality,
-      image: "src/images/image-product-1-thumbnail.jpg",
+      image: firstImage,
     };
 
     const updatedCart = [...prevCart, newItem];
