@@ -3,6 +3,7 @@ import Input from "./input/Input";
 import ResultContainer from "./result-container/ResultContainer";
 import styles from "./CalculationContainer.module.scss";
 import { useState } from "react";
+import { memo } from "react";
 
 const CalculationContainer = () => {
 const [height, setHeight] = useState(0)
@@ -168,4 +169,4 @@ let BMImaxWeight = maxWieght(isImperial, height, hIn, ft);
     );
 }
 
-export default CalculationContainer;
+export default memo(CalculationContainer);
