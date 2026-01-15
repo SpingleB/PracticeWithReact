@@ -1,0 +1,44 @@
+.topInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    padding: 24px;
+}
+
+#title {
+    color: var(--color-blue-900);
+   
+    text-align: center;
+    max-width: 360px;
+}
+
+.info {
+    color: var(--color-grey-500);
+    text-align: center;
+}
+
+@media (min-width: 901px) {
+    .topInfo {
+        align-items: start;
+        padding: 71px 0;
+        gap: 32px;
+
+        img {
+            margin-bottom: 50px;
+        }
+
+        #title {
+            text-align: start;
+            max-width: 480px;
+        }
+
+        .info {
+            color: var(--color-grey-500);
+            text-align: start;
+            max-width: 480px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.radio {
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none; 
+    cursor: pointer;
+    border: 1px solid var(--color-grey-500);
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    transition: var(--fast);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-color: transparent;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:checked{
+        background-color: var(--color-blue-100);
+        border: none;
+    }
+
+    &:checked::after{
+        background-color: var(--color-blue-500);
+    }
+}
+
+.label {
+    color: var(--color-blue-900);
+}

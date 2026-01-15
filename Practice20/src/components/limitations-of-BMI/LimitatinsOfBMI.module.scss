@@ -1,0 +1,118 @@
+.limitations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    gap: 56px;
+}
+
+.titleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    h2 {
+        color: var(--color-blue-900);
+        text-align: center;
+    }
+
+    p {
+        color: var(--color-grey-500);
+        text-align: center;
+    }
+}
+
+.tipsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    .limitationTip {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 32px;
+    padding: 24px;
+    box-shadow: 0 14px 32px rgba(143, 174, 207, 0.35);
+    border-radius: 16px;
+
+    div {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 16px;
+    }
+
+        h2 {
+            color: var(--color-blue-900);
+
+        }
+
+        p {
+            color: var(--color-grey-500);
+
+        }
+    }
+
+}
+
+@media (min-width: 601px) {
+    .limitations {
+
+    .tipsContainer {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    align-items: stretch;
+    justify-items: center;
+    
+    #gender {
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    #age {
+        grid-row-start: 1;
+        grid-column-start: 2;
+    }
+
+    #muslce {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+
+    #pregnancy {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
+    #race {
+        grid-column: span 2 ;
+        justify-self: center;
+        max-width: 436.69px;
+    }
+    }
+
+    }
+
+    .titleContainer {
+        grid-column: span 2 / span 2;
+    }
+}
+
+@media (min-width: 901px) {
+    .limitations {
+        max-width: 1150px;
+        margin-top: 100px;
+    }
+}

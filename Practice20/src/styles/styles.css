@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-grey-500: #5E6E85;
+  --color-grey-300: #ACC1DE;
+  --color-blue-900: #253347;
+  --color-blue-500: #345FF6;
+  --color-blue-300: #B3D3F1;
+  --color-blue-100: #E1E7FE;
+  --gradient: to right #D6FCFE, #D6E6FE;
+  --input-radius: 12px;
+  --form-radius: 16px;
+  --fast: 0.3s ease;
+}
+
+.inter-preset-1-semiBold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4rem;
+  letter-spacing: -5%;
+  line-height: 110%;
+}
+
+.inter-preset-2-semiBold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3rem;
+  letter-spacing: -5%;
+  line-height: 110%;
+}
+
+.inter-preset-3-semiBold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: -5%;
+  line-height: 110%;
+}
+
+.inter-preset-4-semiBold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  letter-spacing: -5%;
+  line-height: 120%;
+}
+
+.inter-preset-5-semiBold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.25rem;
+  letter-spacing: -5%;
+  line-height: 120%;
+}
+
+.inter-preset-6-semiBold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+
+.inter-preset-6-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+
+.inter-preset-7-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+
+.inter-preset-7-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 150%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 48px;
+}
+
+.gradient-background {
+  background: linear-gradient(to right, var(--color-white), #D6FCFE, #D6E6FE);
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 640px;
+  border-radius: 0 0 32px 32px;
+  z-index: 1;
+  max-width: 60%;
+  max-height: 735px;
+}
+
+/*# sourceMappingURL=styles.css.map */

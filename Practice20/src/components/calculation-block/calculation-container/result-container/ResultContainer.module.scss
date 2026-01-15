@@ -1,0 +1,31 @@
+.resultContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 16px;
+    padding: 24px;
+    background-color: var(--color-blue-500);
+    border-radius: var(--form-radius);
+    color: var(--color-white);
+}
+
+@media (min-width: 601px) {
+    .resultContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px;
+        gap: 24px;
+        border-radius: var(--form-radius) 70px 70px var(--form-radius);
+
+        .res-container {
+            width: 3ch;
+        }
+
+        p {
+            width: 50%;
+        }
+    }
+}
