@@ -1,4 +1,4 @@
-import Logo from "../public/assets/shared/logo.svg"
+import Logo from "../public/images/shared/logo.svg";
 import { useState,useEffect, useMemo } from "react";
 import Gallery from "./components/gallery/Gallery";
 import { GalleryContext } from "./context/GalleryContext";
