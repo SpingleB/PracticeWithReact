@@ -1,0 +1,226 @@
+.itemInfo {
+    background-color: var(--color-white);
+    padding: 24px;
+    position: absolute;
+    left: -2px;
+    bottom: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 8px;
+}
+
+.pictureName {
+    color: var(--color-black);
+}
+
+.artist {
+    color: var(--color-grey-400);
+}
+
+.pictureDiv {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+
+    button {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+    }
+}
+
+.artistPicture {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100%;
+    }
+}
+
+.history {
+    color: var(--color-grey-400);
+}
+
+.sourceLink {
+    color: var(--color-grey-400);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slideShow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 55px;
+    margin-top: 25px;
+    border-top: 1px solid var(--color-grey-150);
+}
+
+.footer {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.progress {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-black);
+    width: 0;
+    height: 1px;
+    transition: var(--fast);
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 4px;
+}
+
+.switchItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    button {
+        cursor: pointer;
+    }
+}
+
+
+.overlay {
+    position: fixed;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 44px 24px 24px;
+    gap: 24px;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .pictureDiv {
+        button {
+           bottom: 16px; 
+           top: inherit;
+        }
+        grid-column: span 2 / span 2;
+    }
+
+    .itemInfo {
+        top: -1px;
+        right: -50%;
+        bottom: inherit;
+        left: inherit;
+        padding: 0 0 40px 40px;
+    }
+
+    .slideShow {
+        display: grid;
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;
+        column-gap: 16px;
+        margin-top: 50px;
+    }
+
+    .artistPicture {
+        grid-column-start: 3;
+        align-self: end;
+        width: 128px;
+        height: 128px;
+    }
+
+    .history {
+        grid-column: span 3 / span 3;
+        grid-row-start: 2;
+        justify-self: center;
+    }
+
+    .footer {
+        grid-column: span 3 / span 3;
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+    .sourceLink {
+        grid-column: span 3 / span 3;
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+}
+
+@media (min-width: 901px) {
+    .slideShow {
+        display: grid;
+        grid-auto-columns: auto;
+        grid-auto-rows: auto;
+        column-gap: 16px;
+        row-gap: 32px;
+    }
+
+    .pictureDiv {
+        grid-row: span 2 / span 2;
+        button {
+           bottom: 16px; 
+           top: inherit;
+        }
+        max-width: 750px;
+    }
+
+    .itemInfo {
+        top: -1px;
+        right: -50%;
+        bottom: inherit;
+        left: inherit;
+        padding: 0 0 40px 40px;
+    }
+
+    .artistPicture {
+        grid-row: span 2 / span 2;
+        align-self: end;
+        width: 128px;
+        height: 128px;
+    }
+
+    .sourceLink {
+        grid-column-start: 3;
+    }
+
+    .footer {
+        grid-column: span 3 / span 3;
+        grid-row-start: 3;
+    }
+
+    .history {
+        max-width: 450px;
+        align-self: center;
+    }
+}

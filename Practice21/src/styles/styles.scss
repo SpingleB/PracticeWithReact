@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+@import 'variables', 'fonts';
+
+.container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.start-ss {
+    color: var(--color-grey-400);
+    cursor: pointer;
+    transition: var(--fast);
+
+    &:active {
+        color: var(--color-black);
+    }
+}
+
+.viewButton {
+    background-color: var(--color-black);
+    padding: 14px 16px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        color: var(--color-white);
+    }
+}
+
+.switchButton:disabled{
+    svg g{
+        stroke: var(--color-grey-200);
+    }
+}
+
+@media (min-width: 601px) {
+    
+}
